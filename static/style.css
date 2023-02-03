@@ -44,21 +44,20 @@ html,body{
 .logo{
     size: 16px;
 }
-a::before{
-    text-decoration: none;
-    color: black;
-}
-a:link{
-    text-decoration: none;
-}
-a:visited{
+.effect a:link{
     text-decoration: none;
     color: black;
 }
 .effect a:hover{
+    color: black;
     border-bottom: 2px solid blue;
     transition: all .01s ease-in 0s;
 }
+.effect a:visited{
+    text-decoration: none;
+    color: black;
+}
+
 /* .socials{
     display: flex;
     flex-direction: row;
