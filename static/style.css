@@ -1,0 +1,225 @@
+/* classes top to bottom */
+html,body{
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+.sections{
+    display: flex;
+    flex-direction: column;
+}
+.section{
+    height: 100vh;
+}
+.section:nth-child(1){
+    background-color: #ffffea;
+}
+.section:nth-child(2){
+    background: #ffffcf;
+}
+.section:nth-child(3){
+    background-color: #ffffea;
+}
+.section:nth-child(4){
+    background: #ffffcf;
+}
+.introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+.social-media{
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 10px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+.logo{
+    size: 16px;
+}
+a::before{
+    text-decoration: none;
+    color: black;
+}
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+    color: black;
+}
+.effect a:hover{
+    border-bottom: 2px solid blue;
+    transition: all .01s ease-in 0s;
+}
+/* .socials{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.icon{
+    size: 32px;
+    margin: 0.5em;
+} */
+
+.heading{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin-top: 50px;
+}
+.skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.skill-column{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+.skill-type{
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+}
+.skill-value{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+}
+.skill{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 5px;
+}
+.certifications-row{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+.row{
+    padding: 5px;
+}
+.university{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.university-name{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+}
+.cgpa{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.coursework{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0.5em;
+}
+.course{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 5px;
+    padding: 5px;
+}
+.project-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    height: 75%;
+    width: min(95%,1300px);
+    margin-inline: auto;
+}
+.project{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2em;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.project:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.project-stack{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    font-weight: 400;
+}
+.project-desc{
+    font-weight: 300;
+    text-align: justify;
+}
+.top {
+    --offset: 50px; 
+    
+    position: sticky;
+    bottom: 20px;      
+    margin-right:10px; 
+    margin-left: 10px;
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+    
+    /* visual styling */
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(244, 234, 234);
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+
+/* different IDs */
+#name{
+    width: 75%;
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin: 1em;
+}
+#description{
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    margin: 1em;
+    line-height: 2rem;
+}
+#main_image{
+    padding:10px;
+	border-radius:50%;
+	height:300px;
+	width:300px;
+}
