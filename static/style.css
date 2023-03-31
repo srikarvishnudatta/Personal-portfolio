@@ -1,224 +1,328 @@
-/* classes top to bottom */
-html,body{
-    height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&display=swap');
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+*{
+    padding: 0;
     margin: 0;
-    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
-.sections{
-    display: flex;
-    flex-direction: column;
+body{
+    font-family: var(--sans);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
 }
-.section{
+main{
     height: 100vh;
 }
-.section:nth-child(1){
-    background-color: #ffffea;
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    max-width: 1200px;
 }
-.section:nth-child(2){
-    background: #ffffcf;
+.navbar a{
+    color: var(--white);
+    text-decoration: none;
 }
-.section:nth-child(3){
-    background-color: #ffffea;
+.navbar a:hover{
+    color: var(--magenta);
 }
-.section:nth-child(4){
-    background: #ffffcf;
+h2 a i{
+    margin-right: 0.5em;
+    color: var(--aqua);
+}
+
+.nav [class*='fa-']{
+    color: var(--aqua);
+}.nav [class*='fa-']:hover{
+    color: var(--magenta);
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav{
+    flex: 1;
+    padding: 0 1rem;    
+}
+.resume-btn{
+    height: 2rem;
+    background-color: var(--magenta);
+    border-radius: 0.2rem;
+    width: 5.5rem;
+    padding-left: 0.4rem;
+}
+.resume-btn a:hover{
+    color: var(--white);
+}
+.nav-list li:last-child:hover{
+    background-color: var(--hotmag);
+}
+.main-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0rem 1rem;
+}
+.main-content img{
+    height: 400px;
+    width: 400px;
+    border-radius: 400px;
 }
 .introduction{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+}
+.intro{
+    font-size: 0.9rem;
+    font-family: var(--mono);
+}
+.name{
+    margin-top: 0.4em;
+    color: var(--aqua);
+    font-size: 3em;
+}
+.catch-line{
+    margin-top: 0.4em;
+    font-size: 2em;
+}
+.description,.current{
+    margin-top: 1.5em;
+    font-size: 1rem;
+    font-family: var(--mono);
+}
+.working-projects{
+    list-style: square;
+    margin-top: 0.4em;
+}
+.working{
+    margin-top: 1em;
+    font-size: 1rem;
+    padding: 0 1rem;
+    font-family: var(--mono);
+}
+.gradient{
+    background: linear-gradient(90deg, rgba(255,23,228,1) 0%, rgba(134,251,251,1) 100%);
+    height: 2px;
 }
 .contact{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    width: 100%;
-}
-.social-media{
-    text-align: center;
-    font-size: 1.2rem;
-    margin: 10px;
-    font-weight: 500;
-    font-family: 'Roboto', sans-serif;
-}
-.logo{
-    size: 16px;
-}
-.effect a:link{
-    text-decoration: none;
-    color: black;
-}
-.effect a:hover{
-    color: black;
-    border-bottom: 2px solid blue;
-    transition: all .01s ease-in 0s;
-}
-.effect a:visited{
-    text-decoration: none;
-    color: black;
-}
-
-/* .socials{
-    display: flex;
-    flex-direction: row;
     align-items: center;
+    margin: 0 auto;
+    height: 300px;
+    background-color: var(--plum);
 }
-.icon{
-    size: 32px;
-    margin: 0.5em;
-} */
-
-.heading{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    margin-top: 50px;
+.footer-desc{
+    padding: 2rem 0;
 }
-.skills{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.email-btn{
+    background-color: var(--magenta);
+    padding: 0 0.5rem;
+    vertical-align: middle;
+    height: 2em;
+    border: none;
+    border-radius: 0.2em;
+    color: var(--white);
+    font-size: 1em;
+    font-family: var(--mono);
 }
-.skill-column{
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    font-size: 1.2rem;
-    line-height: 1.5em;
-    font-weight: 500;
+.email-btn:hover{
+    background-color: var(--hotmag);
 }
-.skill-type{
-    font-family: 'Roboto', sans-serif;
-    padding: 5px;
+/* project section
+*/
+.bk-blue{
+    background-color: var(--dkblue);
+    height: 100%;
 }
-.skill-value{
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.2rem;
-    line-height: 1.5em;
+.heading-project{
+    padding: 1rem 1rem;
+    margin: 0 auto;
 }
-.skill{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    padding: 5px;
-}
-.certifications-row{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 2rem;
-}
-.row{
-    padding: 5px;
-}
-.university{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.university-name{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 300;
-
-}
-.cgpa{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: 200;
-    font-style: italic;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.coursework{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin: 0.5em;
-}
-.course{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-    margin-top: 5px;
-    padding: 5px;
-}
-.project-list{
+.projects{
+    padding: 3rem 1rem;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1em;
-    height: 75%;
-    width: min(95%,1300px);
-    margin-inline: auto;
+    gap: 1;
+    grid-template-columns: repeat(3, 1fr);
 }
 .project{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    border-radius: 2em;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-.project:hover{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-.project-stack{
-    margin-top: 1rem;
     margin-bottom: 1rem;
-    font-style: italic;
-    font-weight: 400;
+}
+.project-heading{
+    font-size: 1.2em;
+    color: var(--aqua);
+    width: 350px;
 }
 .project-desc{
-    font-weight: 300;
-    text-align: justify;
+    background-color: var(--black);
+    padding: 3rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin: 1rem 0;
+    font-family: var(--mono);
+    width: 350px;
 }
-.top {
-    --offset: 50px; 
-    
-    position: sticky;
-    bottom: 20px;      
-    margin-right:10px; 
-    margin-left: 10px;
-    place-self: end;
-    margin-top: calc(100vh + var(--offset));
-    
-    /* visual styling */
-    text-decoration: none;
-    padding: 10px;
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(244, 234, 234);
-    border-radius: 100px;
-    white-space: nowrap;
-  }
+.projects > div{
+    font-family: var(--mono);
+}
+.tech-stack{
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+.skill-section{
+    background-color: var(--plum);
+    height: 100vh;
+}
+.skill-heading{
+    padding: 1rem 1rem;
+    margin: 0 auto;
+}
+.skill-column{
+    padding: 3rem 1rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 1;
+    grid-template-columns: repeat(3, 1fr);
+}
+.languages h2{
+    font-size: 1.2em;
+    color: var(--aqua);
+    width: 350px;
+    margin-top: -50px;
+}
+.frameworks h2{
+    font-size: 1.2em;
+    color: var(--aqua);
+    width: 350px;
+    margin-top: -50px;
+}
+.certifications h2{
+    font-size: 1.2em;
+    color: var(--aqua);
+    width: 350px;
+    margin-top: -50px;
+}
+.languages, .frameworks, .certifications{
+    width: 400px;
+    height: 3rem;
+    font-family: var(--mono);
+    color: var(--white);
+    margin: 2rem 0;
+}
 
-/* different IDs */
-#name{
-    width: 75%;
-    font-size: 3rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    margin: 1em;
+.language-skills, .framework-skills, .certificates{
+    background-color: var(--black);
+    padding: 3rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin: 1rem 0;
+    font-family: var(--mono);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
 }
-#description{
-    font-size: 1.3rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    text-align: justify;
-    margin: 1em;
-    line-height: 2rem;
+
+.container-language, .container-framework{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.5rem 0;
 }
-#main_image{
-    padding:10px;
-	border-radius:50%;
-	height:300px;
-	width:300px;
+.certificates{
+    list-style: square;
+    padding: 1rem 2rem;
+}
+.certificate{
+    padding: 0.8rem 0;
+}
+.certificate a:link{
+    text-decoration: none;
+}
+.certificate a{
+    color: var(--white);
+}
+.certificate a:visited{
+    color: var(--white);
+}
+.certificate a:hover{
+    color: var(--magenta);
+}
+.level{
+    background: linear-gradient(90deg, rgba(255,23,228,1) 0%, rgba(134,251,251,1) 100%);
+    height: 2px;
+    width: 200px;
+}
+.language-skills div:nth-child(1)  .level{
+    width: 200px;
+}
+.language-skills div:nth-child(2)  .level{
+    width: 200px;
+}
+.language-skills div:nth-child(3)  .level{
+    width: 180px;
+}
+.language-skills div:nth-child(4)  .level{
+    width: 180px;
+}
+.language-skills div:nth-child(5)  .level{
+    width: 180px;
+}
+.language-skills div:nth-child(6)  .level{
+    width: 150px;
+}
+.language-skills div:nth-child(7)  .level{
+    width: 180px;
+}
+.language-skills div:nth-child(8)  .level{
+    width: 100px;
+}
+.language-skills div:nth-child(9)  .level{
+    width: 100px;
+}
+
+/*framework levels*/
+.framework-skills div:nth-child(1)  .level{
+    width: 150px;
+}
+.framework-skills div:nth-child(2)  .level{
+    width: 200px;
+}
+.framework-skills div:nth-child(3)  .level{
+    width: 180px;
+}
+.framework-skills div:nth-child(4)  .level{
+    width: 180px;
+}
+.framework-skills div:nth-child(5)  .level{
+    width: 180px;
+}
+.framework-skills div:nth-child(6)  .level{
+    width: 150px;
+}
+.framework-skills div:nth-child(7)  .level{
+    width: 180px;
 }
