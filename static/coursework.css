@@ -39,6 +39,7 @@ ul{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 550px;
 }
 .semester{
     font-family: var(--mono);
